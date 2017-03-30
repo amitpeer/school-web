@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+
+<div id="menu">
+    <div id="links">
+        <a href="#main">About Me</a>
+        <a href="#photosDiv">My Photos</a>
+        <a href="#playlistDiv">My Playlist</a>
+        <a href="#likeDiv">Like </a>
+        <a href="#qrcodeDiv">QR code</a>
+        <a href="#spaDiv">SPA Q&A</a>
+        <a href="#contactDiv">Contact Me</a>
+    </div>
+    <div id="menuImgDiv">
+        <img id="pigeon" src="pigeon_icon.jpg">
+    </div>
+</div>
+<div id="main">
+    <div id="aboutDiv"></div>
+    <section id="about" class="section">
+        <h3> about me </h3>
+        <p>
+            Hi. My name is Amit.<br>
+            I'm a Simple and good guy. I enjoy the small things in life and happy moments.
+            I Always prefer the company of other people, and try to enjoy my time on this planet as much as I can.<br>
+            My hobbies are: Music, guitar, coding, traveling.
+        </p>
+    </section>
+
+    <div id="photosDiv"></div>
+    <br><br><br>
+    <section id="photos" class="section">
+        <h3> my photos </h3>
+        <br>
+        <table>
+            <tr>
+                <td><img class="myImages" src="sea2.jpg"/></td>
+                <td><img class="myImages" src="guitar.jpg"/></td>
+            </tr>
+            <tr>
+                <td><img class="myImages" src="sea.jpg"/></td>
+                <td><img class="myImages" src="friends.jpg"></td>
+            </tr>
+        </table>
+    </section>
+
+    <div id="playlistDiv"></div>
+    <br><br><br>
+    <section id="playlist" class="section">
+        <h3> my playlist </h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LRt2jX1kaYo" frameborder="0"
+                allowfullscreen></iframe>
+    </section>
+
+    <div id="likeDiv"></div>
+    <br><br><br>
+    <section id="like" class="section">
+        <h3> give me a like </h3>
+        <div class="fb-like" data-href="https://www.facebook.com/freddiemercury/" data-layout="standard"
+             data-action="like" data-show-faces="true" data-share="true"></div>
+    </section>
+
+    <div id="qrcodeDiv"></div>
+    <br><br><br>
+    <section id="qrcode" class="section">
+        <h3> scan my code </h3>
+    </section>
+
+    <div id="spaDiv"></div>
+    <br><br><br>
+    <section id="spa" class="section">
+        <h3> SPA Q&A </h3>
+        <p>
+            1) Yes, my website is a Single Page Application.
+            All of the content is loaded with a single page load, and is ready to be used by the user.
+            There is no page navigation, only scrolling up and down on the same page,
+            only giving an user experience as if going through different pages.
+            <br><br>
+
+            2) SPA is new architecture, which allows us to retrieve all of the page code at once (html, javascript
+            and css). Also, all of the appropriate resources are dynamically loaded and added to the page when needed.
+            It allows the page app to be agile and responsive without having need to load the page over and over again.
+            <br><br>
+
+            3) Technical approaches: A lot of open source JavaScript frameworks that help with building SPAs.
+            Amongst them: AngularJS, React, Ember, Aurelia, and more.
+
+        </p>
+    </section>
+
+    <div id="contactDiv"></div>
+    <br><br><br>
+    <section id="contact" class="section">
+        <h3> contact me </h3>
+        <form action="mailto:amitpeer05@gmail.com" method="GET">
+            <p>
+                <label> Email Adress: <br>
+                    <input type="text">
+                </label><br>
+                <label> Message: <br>
+                    <textarea></textarea> <br>
+                </label>
+                <input type="submit" value="Send"/>
+            </p>
+        </form>
+    </section>
+
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#nav a").click(function (e) {
+            e.preventDefault();
+            $('html,body').scrollTo(this.hash, this.hash);
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).scroll(function () {
+        $('#menu').toggle($(this).scrollTop() > 1000)
+    });
+    ​
+</script>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>
